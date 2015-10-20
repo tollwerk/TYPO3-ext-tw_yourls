@@ -1,0 +1,60 @@
+# Facsimile extension setup
+plugin.tx_twyourls {
+	view {
+		templateRootPaths {
+			10	= EXT:tw_yourls/Resources/Private/Templates/
+			20	= {$plugin.tx_twyourls.view.templateRootPath}
+		}
+		partialRootPaths {
+			10	= EXT:tw_yourls/Resources/Private/Partials/
+			20	= {$plugin.tx_twyourls.view.partialRootPath}
+		}
+		layoutRootPaths {
+			10	= EXT:tw_yourls/Resources/Private/Layouts/
+			20	= {$plugin.tx_twyourls.view.layoutRootPath}
+		}
+	}
+	persistence {
+		storagePid	= {$plugin.tx_twyourls.persistence.storagePid}
+	}
+	features {
+		# uncomment the following line to enable the new Property Mapper.
+		# rewrittenPropertyMapper	= 1
+	}
+	settings {
+		host		= {$plugin.tx_twyourls.settings.host}
+		user		= {$plugin.tx_twyourls.settings.user}
+		password	= {$plugin.tx_twyourls.settings.password}
+	}
+}
+
+# Ajax: Advanced search load more
+twYourlsShorturl = PAGE
+twYourlsShorturl {
+	typeNum = 1920
+	10 = USER
+	10 {
+		userFunc 		= TYPO3\CMS\Extbase\Core\Bootstrap->run
+		settings 		< plugin.tx_twyourls.settings
+		persistence 	< plugin.tx_twyourls.persistence
+		view 			< plugin.tx_twyourls.view
+		vendorName		= Tollwerk
+		pluginName		= Yourls
+		extensionName	= TwYourls
+		controller		= Yourls
+		action			= shorturl
+		switchableControllerActions{
+			Yourls {
+				1 = shorturl
+			}
+		}
+	}
+
+	config {
+		disableAllHeaderCode 	= 1
+		xhtml_cleaning 			= 0
+		admPanel				= 0
+		index_enable			= 0
+		no_cache 				= 1
+	}
+}

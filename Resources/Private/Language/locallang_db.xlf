@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2015-04-28T17:35:29Z" product-name="tw_yourls">
+		<header/>
+		<body>
+			<trans-unit id="constants.file.templateRootPath" xml:space="preserve">
+				<source>Path to template root (FE)</source>
+			</trans-unit>
+			<trans-unit id="constants.file.partialRootPath" xml:space="preserve">
+				<source>Path to template partials (FE)</source>
+			</trans-unit>
+			<trans-unit id="constants.file.layoutRootPath" xml:space="preserve">
+				<source>Path to template layouts (FE)</source>
+			</trans-unit>
+			<trans-unit id="constants.pid.storagePid" xml:space="preserve">
+				<source>Default storage page (ID)</source>
+			</trans-unit>
+			<trans-unit id="constants.yourls" xml:space="preserve">
+				<source>YOURLS</source>
+			</trans-unit>
+			<trans-unit id="constants.yourls.host" xml:space="preserve">
+				<source>YOURLS host</source>
+			</trans-unit>
+			<trans-unit id="constants.yourls.user" xml:space="preserve">
+				<source>YOURLS API username</source>
+			</trans-unit>
+			<trans-unit id="constants.yourls.password" xml:space="preserve">
+				<source>YOURLS API password</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>
