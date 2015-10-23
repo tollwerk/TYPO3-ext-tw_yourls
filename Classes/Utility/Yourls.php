@@ -87,10 +87,10 @@ class Yourls
 	/**
 	 * Create and / or return a short URL
 	 *
-	 * @param string $url			Full URL
-	 * @param string $keyword		Optional: Keyword
-	 * @param string $title			Optional: Title
-	 * @return object				Result
+	 * @param string $url Full URL
+	 * @param string $keyword Optional: Keyword
+	 * @param string $title Optional: Title
+	 * @return object                Result
 	 */
 	public function shorturl($url, $keyword = '', $title = '')
 	{
@@ -106,7 +106,8 @@ class Yourls
 				return $result->shorturl;
 			}
 
-		} catch(\Exception $e) {}
+		} catch (\Exception $e) {
+		}
 
 		return $url;
 	}

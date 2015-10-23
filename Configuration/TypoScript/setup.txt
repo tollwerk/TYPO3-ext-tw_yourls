@@ -2,16 +2,16 @@
 plugin.tx_twyourls {
 	view {
 		templateRootPaths {
-			10	= EXT:tw_yourls/Resources/Private/Templates/
-			20	= {$plugin.tx_twyourls.view.templateRootPath}
+			10		= EXT:tw_yourls/Resources/Private/Templates/
+			20		= {$plugin.tx_twyourls.view.templateRootPath}
 		}
 		partialRootPaths {
-			10	= EXT:tw_yourls/Resources/Private/Partials/
-			20	= {$plugin.tx_twyourls.view.partialRootPath}
+			10		= EXT:tw_yourls/Resources/Private/Partials/
+			20		= {$plugin.tx_twyourls.view.partialRootPath}
 		}
 		layoutRootPaths {
-			10	= EXT:tw_yourls/Resources/Private/Layouts/
-			20	= {$plugin.tx_twyourls.view.layoutRootPath}
+			10		= EXT:tw_yourls/Resources/Private/Layouts/
+			20		= {$plugin.tx_twyourls.view.layoutRootPath}
 		}
 	}
 	persistence {
@@ -22,6 +22,7 @@ plugin.tx_twyourls {
 		# rewrittenPropertyMapper	= 1
 	}
 	settings {
+		enabled		= {$plugin.tx_twyourls.settings.enabled}
 		host		= {$plugin.tx_twyourls.settings.host}
 		user		= {$plugin.tx_twyourls.settings.user}
 		password	= {$plugin.tx_twyourls.settings.password}

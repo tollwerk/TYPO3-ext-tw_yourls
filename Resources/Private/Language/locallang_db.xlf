@@ -18,6 +18,9 @@
 			<trans-unit id="constants.yourls" xml:space="preserve">
 				<source>YOURLS</source>
 			</trans-unit>
+			<trans-unit id="constants.yourls.enabled" xml:space="preserve">
+				<source>Enable short URLs: If not enabled, no URL shortening will happen for this installation (for test / staging servers)</source>
+			</trans-unit>
 			<trans-unit id="constants.yourls.host" xml:space="preserve">
 				<source>YOURLS host</source>
 			</trans-unit>

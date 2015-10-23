@@ -16,4 +16,4 @@ if (!defined('TYPO3_MODE')) {
 );
 
 // Enables eID calls for the YOURLS requests (like /index.php?eID=yourls)
-// $GLOBALS['TYPO3_CONF_VARS']['FE']['eID_include']['yourls'] = 'EXT:tw_yourls/Classes/Eid/Yourls.php';
+ $GLOBALS['TYPO3_CONF_VARS']['FE']['eID_include']['yourls'] = 'EXT:tw_yourls/Classes/Eid/Yourls.php';

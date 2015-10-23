@@ -38,12 +38,17 @@ class YourlsController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControlle
 	 * @param string $url			Full URL
 	 * @param string $keyword		Optional: Keyword
 	 * @param string $title			Optional: Title
-	 * @return object				Result
+	 * @return string				Short URL
 	 */
 	public function shorturlAction($url, $keyword = '', $title = '')
 	{
-		$yourlsClient = new \Tollwerk\TwYourls\Utility\Yourls($this->settings['host'], $this->settings['user'], $this->settings['password']);
-		return $yourlsClient->shorturl($url, $keyword, $title);
+		// If URL shortening is enabled
+		if ($this->settings['enabled']) {
+			$yourlsClient	= new \Tollwerk\TwYourls\Utility\Yourls($this->settings['host'], $this->settings['user'], $this->settings['password']);
+			$url			= $yourlsClient->shorturl($url, $keyword, $title);
+		}
+
+		return $url;
 	}
 }
 
