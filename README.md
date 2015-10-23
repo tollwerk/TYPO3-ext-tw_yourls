@@ -21,7 +21,13 @@ Sorry, no real documentation yet, but the usage is very simple. Please ensure to
 http://example.com/index.php?type=1920&tx_twyourls[url]=http%3A%2F%2Fexample.com
 ```
 
-* You may optionally pass the parameters `tx_twyourls[title]` and `tx_twyourls[keyword]` (see the [`shorturl` YOURLS documentation](http://yourls.org/#apiusage)).
+* Alternatively make an `eID=yourls` request to your frontend:
+
+```
+http://example.com/index.php?eID=yourls&tx_twyourls[url]=http%3A%2F%2Fexample.com
+```
+
+* In both cases you may optionally pass the parameters `tx_twyourls[title]` and `tx_twyourls[keyword]` (see the [`shorturl` YOURLS documentation](http://yourls.org/#apiusage)).
 * The request will return the shortened URL (or the original URL in case of an error)
 
 Requirements
